@@ -1,0 +1,303 @@
+@import "root.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  image-orientation: from-image;
+}
+
+html {
+  font-size: 15.5px;
+}
+
+body {
+  background: var(--main-color);
+  color: var(--text-color);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:visited {
+  color: var(--text-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.navbar-desktop {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  padding: 2rem;
+  background: var(--main-color);
+  width: 275px;
+}
+
+.navbar-mobile {
+  width: 100%;
+  height: 75px;
+  background: var(--main-color);
+  display: flex;
+  align-items: center;
+  padding-left: 4%;
+}
+
+.navbar-mobile-open {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 2;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: var(--main-color);
+  padding-top: 18.5px;
+  padding-left: 4%;
+}
+
+#desktop-header {
+  text-decoration: none;
+  color: var(--third-color);
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: 2rem;
+  font-size: 3.8rem;
+  letter-spacing: 0.2rem;
+  line-height: 3.3rem;
+  cursor: default;
+}
+#mobile-header a {
+  color: var(--third-color);
+}
+
+#menu {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+#menu::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+}
+
+ul .menu-year {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-top: 35px;
+}
+
+#main-container {
+  height: 100%;
+  width: 100%;
+  margin-left: 275px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  background-color: var(--secondary-color);
+}
+
+#main-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.section-container {
+  background: var(--third-color);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 700px;
+  margin: 25px auto;
+  padding: 25px;
+}
+
+.img-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.img-container img {
+  display: block;
+  width: 100%;
+  background-size: cover;
+}
+
+.episode-header {
+  margin: 0 auto;
+  font-size: 3.4rem;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--main-color);
+  margin-bottom: 12px;
+}
+
+.episode-subheader {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--text-color);
+  margin: 0 auto;
+  margin-bottom: 12px;
+}
+
+.episode-subheader a {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.text-header {
+  font-size: 3.4rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--main-color);
+}
+
+.text-block {
+  margin: 25px 0;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  color: var(--text-color);
+}
+
+.text-block a {
+  font-weight: 500;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+.selectDisable {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.display {
+  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1s; /* Firefox < 16 */
+  -ms-animation: fadein 1s; /* Internet Explorer */
+  -o-animation: fadein 1s; /* Opera < 12.1 */
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  html {
+    font-size: 13.5px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  .episode-subheader {
+    font-size: 1.2rem !important;
+  }
+  .episode-header {
+    font-size: 3rem !important;
+  }
+  #menu-list li a {
+    font-size: 2.3rem;
+    line-height: 1.5;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .section-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    padding: 4%;
+  }
+  #main-container {
+    background-color: var(--third-color) !important;
+  }
+}
