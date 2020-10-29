@@ -1,0 +1,112 @@
+@import "root.css";
+
+@keyframes spin {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(1turn);
+  }
+}
+
+.green-audio-player {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 25px;
+  padding-right: 25px;
+  user-select: none;
+  background-color: var(--third-color);
+}
+.green-audio-player svg,
+.green-audio-player img {
+  display: block;
+  width: 15px;
+  height: 20px;
+}
+.green-audio-player .play-pause-btn {
+  display: none;
+  cursor: pointer;
+}
+.green-audio-player .loading .loading__spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--main-color);
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.4s linear infinite;
+}
+.green-audio-player .slider {
+  flex-grow: 1;
+  background-color: #d8d8d8;
+  cursor: pointer;
+  position: relative;
+}
+.green-audio-player .slider .gap-progress {
+  background-color: var(--main-color);
+  position: absolute;
+  pointer-events: none;
+}
+.green-audio-player .controls__current-time,
+.green-audio-player .controls__total-time {
+  width: 30px;
+  color: var(--main-color);
+  margin-right: 25px;
+}
+.green-audio-player .controls {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.25rem;
+  line-height: auto;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 25px;
+}
+.green-audio-player .controls .controls__slider {
+  margin-right: 25px;
+  height: 14px;
+}
+.green-audio-player .controls .controls__slider .controls__progress {
+  width: 0;
+  height: 100%;
+}
+.green-audio-player .controls span {
+  cursor: default;
+}
+.green-audio-player .volume {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.green-audio-player .volume .volume__button {
+  margin-right: 12px;
+}
+.green-audio-player .volume .volume__button.open path {
+  fill: var(--main-color);
+}
+.green-audio-player .volume .volume__controls {
+  width: 75px;
+  height: 14px;
+  background-color: var(--main-color);
+  display: flex;
+}
+.green-audio-player .volume .volume__controls .volume__slider {
+  width: 100%;
+}
+.green-audio-player
+  .volume
+  .volume__controls
+  .volume__slider
+  .volume__progress {
+  bottom: 0;
+  height: 14px;
+  width: 100%;
+}
+
+.volume__controls {
+  background-color: rgba(250, 250, 250, 0.9) !important;
+}
